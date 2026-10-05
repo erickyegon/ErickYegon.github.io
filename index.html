@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erick Kiprotich Yegon · Epidemiologist and data scientist</title>
+<meta name="description" content="Epidemiologist and data scientist working on real-world evidence, causal inference, health economics and healthcare AI. Selected projects with live reports and an interactive budget model.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Erick Kiprotich Yegon">
+<meta property="og:title" content="Erick Kiprotich Yegon · Epidemiologist and data scientist">
+<meta property="og:description" content="Real-world evidence, causal inference, health economics and healthcare AI. Two flagship projects with live reports.">
+<meta property="og:url" content="https://erickyegon.github.io/">
+<meta property="og:image" content="https://erickyegon.github.io/assets/img/social_preview.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Erick Kiprotich Yegon, epidemiologist and data scientist, with headline results from two flagship projects">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Erick Kiprotich Yegon · Epidemiologist and data scientist">
+<meta name="twitter:description" content="Real-world evidence, causal inference, health economics and healthcare AI. Two flagship projects with live reports.">
+<meta name="twitter:image" content="https://erickyegon.github.io/assets/img/social_preview.png">
+<meta name="twitter:image:alt" content="Erick Kiprotich Yegon, epidemiologist and data scientist, with headline results from two flagship projects">
+<link rel="canonical" href="https://erickyegon.github.io/">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="wrap">
+<nav class="top" aria-label="Sections">
+  <a href="#evidence">Real-world evidence</a>
+  <a href="#more">More work</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header class="hero">
+  <p class="eyebrow">Erick Kiprotich Yegon</p>
+  <h1>Epidemiologist and data scientist</h1>
+  <p class="lede">I work on real-world evidence, causal inference, health economics and healthcare AI. I build the analysis and the pipeline around it, and I check my methods against a known answer where I can.</p>
+  <p class="byline">Richmond, Kentucky · 17+ years in epidemiology and global health analytics</p>
+  <p class="open"><strong>Open to HEOR, real-world evidence and market access roles.</strong></p>
+  <div class="buttons">
+    <a class="btn primary" href="#evidence">See selected work</a>
+    <a class="btn" href="https://github.com/erickyegon">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/erickyegon">LinkedIn</a>
+  </div>
+</header>
+</div>
+
+<main id="main" class="wrap">
+
+<section id="evidence" aria-labelledby="evidence-h">
+  <p class="eyebrow">Selected work</p>
+  <h2 id="evidence-h">Real-world evidence</h2>
+  <p class="sub">Two studies, each with a live report. One asks what a policy did; the other asks whether synthetic data can be trusted.</p>
+
+  <article class="feature" aria-labelledby="inc-h">
+    <div>
+      <h3 id="inc-h">Access and value of obesity drugs in Medicaid</h3>
+      <p>A public-data study of what happened when state Medicaid programs covered Wegovy and Zepbound, with a tested warehouse (PostgreSQL, dbt), an R analysis, a Quarto report and an interactive budget model.</p>
+      <div class="cards">
+        <div class="card"><span class="num">12.2</span><span class="unit">more prescriptions per 1,000 enrollees per quarter</span><span class="ci">95% CI 8.4 to 16.0</span></div>
+        <div class="card"><span class="num">$161.3M</span><span class="unit">net cost over five years</span><span class="ci">for a 1-million-enrollee program, central case</span></div>
+      </div>
+      <ul class="links">
+        <li><a href="https://erickyegon.github.io/incretin-access-value/">Project site</a></li>
+        <li><a href="https://erickyegon.github.io/incretin-access-value/report.html">Report</a></li>
+        <li><a href="https://erickyegon.github.io/incretin-access-value/budget-model.html">Interactive budget model</a></li>
+        <li><a href="https://erickyegon.github.io/incretin-access-value/one_page_summary.pdf">One-page summary (PDF)</a></li>
+        <li><a href="https://github.com/erickyegon/incretin-access-value">Code</a></li>
+      </ul>
+      <p class="small">Public aggregate data; associations and scenarios, not effects of any company's promotion.</p>
+    </div>
+    <figure>
+      <img src="assets/img/event_study.png" width="1650" height="1020" alt="Event-study chart: estimated effect of Medicaid coverage on obesity-drug prescriptions by quarter since coverage began" loading="lazy">
+      <figcaption>Estimated effect of coverage on prescriptions, by quarter since coverage began.</figcaption>
+    </figure>
+  </article>
+
+  <article class="feature" aria-labelledby="onc-h" style="margin-top:36px">
+    <div>
+      <h3 id="onc-h">Oncology RWE: how realistic is synthetic EHR data?</h3>
+      <p>An NSCLC survival pipeline on synthetic EHR data (Synthea to OMOP CDM to dbt to R), benchmarked against 172,582 real U.S. patients from SEER. It documents a case where the synthetic data failed validation: unmodified Synthea staged every lung cancer as stage I.</p>
+      <div class="cards">
+        <div class="card"><span class="num">53% vs 18%</span><span class="unit">five-year survival, stage I</span><span class="ci">SEER versus Synthea</span></div>
+        <div class="card"><span class="num">172,582</span><span class="unit">SEER patients used as the benchmark</span><span class="ci">NSCLC, diagnosed 2010 to 2015, age 50+</span></div>
+      </div>
+      <p>Medians alone would have passed the data as realistic; the full curves show it can test a pipeline but not stand in for real-world outcomes.</p>
+      <ul class="links">
+        <li><a href="https://erickyegon.github.io/oncology-rwe-nsclc/report.html">Full report</a></li>
+        <li><a href="https://erickyegon.github.io/oncology-rwe-nsclc/one_page_summary.pdf">One-page summary (PDF)</a></li>
+        <li><a href="https://github.com/erickyegon/oncology-rwe-nsclc">Code</a></li>
+      </ul>
+      <p class="small">Synthetic patient-level data plus public registry aggregates. A methods demonstration, not clinical evidence.</p>
+    </div>
+    <figure>
+      <img src="assets/img/km_synthea_vs_seer.png" width="2000" height="1200" alt="Kaplan-Meier survival curves by stage, Synthea compared with SEER" loading="lazy">
+      <figcaption>Kaplan-Meier survival by stage, Synthea versus SEER.</figcaption>
+    </figure>
+  </article>
+
+  <article class="feature" aria-labelledby="rwd-h" style="margin-top:36px; grid-template-columns:1fr">
+    <div>
+      <h3 id="rwd-h">Companion: checking the methods against a known truth</h3>
+      <p>A Python pipeline on a custom generator whose true answers are recorded. It derives lines of therapy with rule-based logic (98.1% whole-sequence exact match against truth), then tests IPTW, an immortal-time-bias demonstration and a 10-seed Monte-Carlo bias and coverage study. In the demonstration, a treatment with no effect appears to cut mortality by about 45% unless exposure is handled as time-varying.</p>
+      <ul class="links">
+        <li><a href="https://github.com/erickyegon/nsclc-rwd-truth-recovery">Code and results</a></li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<section id="more" aria-labelledby="more-h">
+  <p class="eyebrow">More work</p>
+  <h2 id="more-h">Healthcare ML, AI and data platforms</h2>
+  <div class="grid">
+    <div class="proj">
+      <strong>Immunization defaulter risk engine</strong>
+      <p>XGBoost with SHAP and calibration for 6,864 children across 4,672 CHW areas in Kenya (ROC-AUC 0.892). FastAPI and Streamlit.</p>
+      <ul class="links"><li><a href="https://github.com/erickyegon/immunization-defaulter-risk-engine">Code</a></li><li><a href="https://immunizationengine.streamlit.app/">Live app</a></li></ul>
+    </div>
+    <div class="proj">
+      <strong>Clinical document intelligence</strong>
+      <p>FDA drug-label RAG with five-stage retrieval, multi-agent orchestration, clinical guardrails and 54 automated tests.</p>
+      <ul class="links"><li><a href="https://github.com/erickyegon/clinical-doc-intelligence">Code</a></li></ul>
+    </div>
+    <div class="proj">
+      <strong>CertiAce retail analytics on Microsoft Fabric</strong>
+      <p>Medallion lakehouse over 555K rows with DAX measures, KQL monitoring, row- and object-level security and deployment pipelines.</p>
+      <ul class="links"><li><a href="https://github.com/erickyegon/certace-fabric-analytics">Code</a></li></ul>
+    </div>
+    <div class="proj">
+      <strong>Community health intelligence platform</strong>
+      <p>Databricks lakehouse for Kenya's CHW program: medallion pipeline, Unity Catalog row-level security, dashboard.</p>
+      <ul class="links"><li><a href="https://github.com/erickyegon/community-health-intelligence-platform">Code</a></li></ul>
+    </div>
+    <div class="proj">
+      <strong>AgentCare</strong>
+      <p>Six-agent LangGraph orchestration for patient administration and care coordination.</p>
+      <ul class="links"><li><a href="https://github.com/erickyegon/AgentCare">Code</a></li></ul>
+    </div>
+    <div class="proj">
+      <strong>Within Reach</strong>
+      <p>A #TidyTuesday analysis of hospital access across 11,422 U.S. cities, with a live Shiny app.</p>
+      <ul class="links"><li><a href="https://github.com/erickyegon/within-reach">Code</a></li><li><a href="https://01a0ee6a-97e7-2695-7bb6-f897551993b8.share.connect.posit.cloud/">Live app</a></li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-h">
+  <p class="eyebrow">About</p>
+  <h2 id="about-h">Background</h2>
+  <p>I have spent more than 17 years in epidemiology, global health analytics, data science and agentic AI, underpinned by doctoral training in epidemiology.</p>
+  <ul class="edu" aria-label="Education">
+    <li><strong>PhD, Epidemiology</strong><span>Jomo Kenyatta University of Agriculture and Technology</span></li>
+    <li><strong>MSc, Health Systems Management</strong><span>Kenya Methodist University</span></li>
+    <li><strong>BSc, Statistics</strong><span>University of Nairobi</span></li>
+  </ul>
+</section>
+
+<section id="contact" aria-labelledby="contact-h">
+  <p class="eyebrow">Contact</p>
+  <h2 id="contact-h">Get in touch</h2>
+  <ul class="contact">
+    <li><a href="mailto:keyegon@gmail.com">keyegon@gmail.com</a> <span class="small">· Resume available on request</span></li>
+    <li><a href="https://github.com/erickyegon">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/erickyegon">LinkedIn</a></li>
+    <li><a href="https://medium.com/@keyegon">Medium</a></li>
+    <li><a href="https://orcid.org/0000-0002-7055-4848">ORCID</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p class="small">Erick Kiprotich Yegon · Richmond, Kentucky.</p>
+</footer>
+</body>
+</html>
